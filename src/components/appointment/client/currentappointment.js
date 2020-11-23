@@ -6,7 +6,7 @@ const currentAppointment = (props) => {
     };
     return (
         <div className={"currentAppointment"} style={style}>
-
+            currentAppointment Works!
         </div>
 
     )
