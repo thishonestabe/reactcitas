@@ -1,15 +1,53 @@
 import React from 'react';
+import './sidemenu.css'
 
-const sideMenu = (props) => {
-    const style = {
+import { Menu, Button } from 'antd';
+import {
+    DesktopOutlined,
+    PieChartOutlined,
+    FileOutlined,
+    TeamOutlined,
+    UserOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+} from '@ant-design/icons';
 
+const { SubMenu } = Menu;
+
+class SideMenu extends React.Component {
+    style = {
+        width: '100%'
     };
-    return (
-        <div className={"sideMenu"} style={style}>
+    state = {
+        collapsed: false,
+    };
+    toggleCollapsed = () => {
+        this.setState({
+            collapsed: !this.state.collapsed,
+        });
+    };
+    menuFolded = this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined;
 
-        </div>
 
-    )
+
+    render() {
+        return (
+            <div className={"sideMenu"} style={this.style}>
+                <div style={{height: "60px"}} />
+                <Menu theme={"dark"} defaultSelectedKeys={['1']} mode={"inline"}>
+                    <Menu.Item key="1" icon={<PieChartOutlined />}>
+                        Home
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<DesktopOutlined />}>
+                        Appointments
+                    </Menu.Item>
+
+                    <Menu.Item key="9" icon={<FileOutlined />}>
+                        Logout
+                    </Menu.Item>
+                </Menu>
+            </div>
+        );
+    };
 }
-
-export default sideMenu
+export default SideMenu;
