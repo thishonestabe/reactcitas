@@ -6,7 +6,7 @@ const header = (props) => {
     };
     return (
         <div className={"Header"} style={style}>
-            Hello
+            Dental Clinic
         </div>
 
     )

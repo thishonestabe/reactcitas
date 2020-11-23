@@ -33,7 +33,7 @@ class SideMenu extends React.Component {
     render() {
         return (
             <div className={"sideMenu"} style={this.style}>
-                <div style={{height: "60px"}} />
+                <div style={{height: "60px", color: 'white'}}>Welcome {this.props.user.name}</div>
                 <Menu theme={"dark"} defaultSelectedKeys={['1']} mode={"inline"}>
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
                         Home
