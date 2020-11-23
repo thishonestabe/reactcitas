@@ -41,6 +41,9 @@ class SideMenu extends React.Component {
                     <Menu.Item key="2" icon={<DesktopOutlined />}>
                         Appointments
                     </Menu.Item>
+                    <Menu.Item key="2" icon={<DesktopOutlined />}>
+                        Admin
+                    </Menu.Item>
 
                     <Menu.Item key="9" icon={<FileOutlined />}>
                         Logout
