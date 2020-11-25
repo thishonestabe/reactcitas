@@ -1,4 +1,7 @@
 import React from 'react';
+import { Card, Avatar } from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+const { Meta } = Card;
 
 const currentAppointment = (props) => {
     const style = {
@@ -7,9 +10,26 @@ const currentAppointment = (props) => {
     return (
         <div className={"currentAppointment"} style={style}>
             <div>
-                <div>Your current appointment is on</div>
-                <div>You have no current appointments</div>
-                <div>Manage your appointments</div>
+                <Card
+                    style={{ width: 300 }}
+                    cover={
+                        <img
+                            alt="example"
+                            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                        />
+                    }
+                    actions={[
+                        <SettingOutlined key="setting" />,
+                        <EditOutlined key="edit" />,
+                        <EllipsisOutlined key="ellipsis" />,
+                    ]}
+                >
+                    <Meta
+                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                        title="Current Appointment"
+                        description="Your current Appointment is on"
+                    />
+                </Card>,
             </div>
         </div>
 
