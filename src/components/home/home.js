@@ -4,7 +4,8 @@ import Headerapp from './header';
 import SideMenu from '../nav/sidemenu'
 import { Layout } from 'antd';
 // import CurrentAppointment from '../appointment/client/currentappointment'
-import EditAppointment from '../appointment/client/editappointment'
+//import EditAppointment from '../appointment/client/editappointment'
+import ViewAppointments from '../appointment/client/viewappointments';
 const { Header, Sider, Content } = Layout;
 class Home extends React.Component {
     style = {
@@ -30,14 +31,14 @@ class Home extends React.Component {
             <div className={"Home"} style={this.style}>
                 <Layout>
                     <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
-                        <SideMenu user={this.state.user}></SideMenu>
+                        <SideMenu user={this.state.user}/>
                     </Sider>
                     <Layout>
                         <Header className="site-layout-background" style={{ padding: 0 }} >
-                            <Headerapp></Headerapp>
+                            <Headerapp/>
                         </Header>
                         <Content style={{height: "100vh"}}>
-                            <EditAppointment/>
+                            <ViewAppointments/>
                         </Content>
                     </Layout>
 
