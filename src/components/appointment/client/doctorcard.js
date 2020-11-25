@@ -1,23 +1,25 @@
 import React from 'react';
-import { Card, Avatar, Typography, Space } from 'antd';
+import { Card, Avatar, Typography, Space, Row, Col } from 'antd';
 import { AntDesignOutlined } from '@ant-design/icons';
 
 const doctorCard = () => {
     const style = {
 
     };
-    const { Text, Link } = Typography;
+    const { Text } = Typography;
     return (
         <div className={"doctorCard"} style={style}>
-            <h4>Your Doctor</h4>
-            <Card title="Default size card" extra={<a href="#">More</a>} style={{ width: 300 }}>
-                <div>
+
+            <Card title="Your Doctor"  style={{ width: '500px' }}>
+                <Row justify="space-around">
+
+                <Col className="gutter-row" span={4}>
                 <Avatar
                     size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
                     icon={<AntDesignOutlined />}
                 />
-                </div>
-                <div>
+                </Col>
+                <Col className="gutter-row" span={8}>
                     <Space direction="vertical">
                         <h4>Dr. Polo</h4>
                         <Text type="secondary">General Dentist</Text>
@@ -27,7 +29,8 @@ const doctorCard = () => {
 
                     </Space>
 
-                </div>
+                </Col>
+                </Row>
 
             </Card>
         </div>

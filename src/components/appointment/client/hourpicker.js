@@ -11,7 +11,7 @@ const hourPicker = (props) => {
         <div className={"hourPicker"} style={style}>
             <Tabs defaultActiveKey="1" tabPosition={"top"} style={{ height: 220 }}>
                 {[...Array.from({ length: 7 }, (v, i) => i)].map(i => (
-                    <TabPane tab={`Tab-${i}`} key={i} disabled={i === 6}>
+                    <TabPane tab={`Tab-${i}`} key={i + 'ab'} disabled={i === 6}>
                         Content of tab {i}
                     </TabPane>
                 ))}
