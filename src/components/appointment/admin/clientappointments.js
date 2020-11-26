@@ -1,5 +1,6 @@
-import React from 'react';
-import { Calendar, Badge } from 'antd';
+import React, { Component } from 'react';
+import { Calendar, Badge, Modal, Button } from 'antd';
+import ViewDay from './vieday';
 import './admin.css';
 
 function getListData(value) {
@@ -62,16 +63,46 @@ function monthCellRender(value) {
     ) : null;
 }
 
-const clientAppointments = (props) => {
-    const style = {
+class ClientAppointments extends Component {
+    style = {
 
     };
-    return (
-        <div className={"clientAppointments"} style={style}>
-            <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />,
-        </div>
+    state = { visible: false };
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    };
 
-    )
+    handleOk = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
+
+    handleCancel = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
+    render() {
+        return (
+            <div className={"clientAppointments"} style={this.style}>
+                <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} onSelect={this.showModal}/>
+                <Modal
+                    title="Basic Modal"
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                >
+                   <ViewDay/>
+                </Modal>
+            </div>
+
+        )
+    }
 }
 
-export default clientAppointments
+export default ClientAppointments

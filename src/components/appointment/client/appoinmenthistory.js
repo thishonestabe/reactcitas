@@ -56,7 +56,7 @@ const appointmentHistory = (props) => {
     const { Text } = Typography;
     return (
         <div className={"appointmentHistory"} style={style}>
-
+            <h4>Appointments History</h4>
             <Table columns={columns} dataSource={data} />
         </div>
 

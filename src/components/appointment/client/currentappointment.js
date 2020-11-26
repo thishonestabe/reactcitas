@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import { Card, Avatar } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 const { Meta } = Card;
@@ -20,7 +26,7 @@ const currentAppointment = (props) => {
                     }
                     actions={[
                         <SettingOutlined key="setting" />,
-                        <EditOutlined key="edit" />,
+                        <Link to={"/editAppointment"}><EditOutlined key="edit"/></Link>,
                         <EllipsisOutlined key="ellipsis" />,
                     ]}
                 >

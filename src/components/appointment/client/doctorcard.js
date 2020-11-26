@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Avatar, Typography, Space, Row, Col } from 'antd';
+import { Card, Avatar, Typography, Space, Row, Col, Image } from 'antd';
 import { AntDesignOutlined } from '@ant-design/icons';
 
 const doctorCard = () => {
@@ -15,8 +15,8 @@ const doctorCard = () => {
 
                 <Col className="gutter-row" span={4}>
                 <Avatar
-                    size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-                    icon={<AntDesignOutlined />}
+                    size={{ xs: 48, sm: 64, md: 80, lg: 128, xl: 200, xxl: 300 }}
+                    src={<Image src="https://image.freepik.com/vector-gratis/doctor-icono-o-avatar-blanco_136162-58.jpg"/>}
                 />
                 </Col>
                 <Col className="gutter-row" span={8}>

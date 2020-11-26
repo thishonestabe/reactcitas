@@ -3,9 +3,11 @@ import './home.css';
 import Headerapp from './header';
 import SideMenu from '../nav/sidemenu'
 import { Layout } from 'antd';
-// import CurrentAppointment from '../appointment/client/currentappointment'
-//import EditAppointment from '../appointment/client/editappointment'
+import { Route } from 'react-router-dom'
+import CurrentAppointment from '../appointment/client/currentappointment'
+import EditAppointment from '../appointment/client/editappointment'
 import ViewAppointments from '../appointment/client/viewappointments';
+import Admin from '../appointment/admin/clientappointments'
 const { Header, Sider, Content } = Layout;
 class Home extends React.Component {
     style = {
@@ -38,7 +40,10 @@ class Home extends React.Component {
                             <Headerapp/>
                         </Header>
                         <Content style={{height: "100vh"}}>
-                            <ViewAppointments/>
+
+                            <Route path={"/home"} exact component={ViewAppointments}/>
+                            <Route path={"/editAppointment"} exact component={EditAppointment}/>
+                            <Route path={"/admin"} exact component={Admin}/>
                         </Content>
                     </Layout>
 

@@ -11,7 +11,7 @@ const viewAppointments = (props) => {
     return (
         <div className={"viewAppointments"} style={style}>
 
-            <Divider orientation="left">Appointment Management</Divider>
+            <Divider orientation="left">Home - Appointment Management</Divider>
 
                 <Row justify="space-around">
 
