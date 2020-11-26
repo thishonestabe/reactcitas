@@ -42,7 +42,7 @@ const viewDay = (props) => {
 
     return (
         <div className={"viewDay"} style={style}>
-            <Table dataSource={dataSource} columns={columns} />
+            <Table pagination={false} dataSource={dataSource} columns={columns} />
         </div>
 
     )

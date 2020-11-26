@@ -39,7 +39,7 @@ class Home extends React.Component {
                         <Header className="site-layout-background" style={{ padding: 0 }} >
                             <Headerapp/>
                         </Header>
-                        <Content style={{height: "100vh"}}>
+                        <Content style={{height: "85.5vh"}}>
 
                             <Route path={"/home"} exact component={ViewAppointments}/>
                             <Route path={"/editAppointment"} exact component={EditAppointment}/>
